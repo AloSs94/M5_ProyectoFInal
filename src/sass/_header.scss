@@ -1,0 +1,96 @@
+$fondo: #ffff;
+$barras: #1c1c1c;
+$Blancas: #f9f6ff;
+header {
+  width: 100%;
+  background: {
+    color: #281a0c;
+    image: url("../public/imgs/Fondo.jpg");
+    size: cover;
+    attachment: fixed;
+  }
+  .contenedor {
+    position: relative;
+    height: 700px;
+  }
+  #ContenedorMenu {
+    width: 100%;
+    height: 100%;
+  }
+  .menu {
+    position: fixed;
+    float: right;
+    width: 100%;
+    z-index: 99999;
+    background: transparent;
+    transition: background-color .3s ease;
+    &.color{
+      background: $Blancas;
+    }
+    #Responsive {
+      order: 2;
+      display: none;
+      background: transparent;
+      float: right;
+      margin: 15px 30px;
+      .bar {
+        display: block;
+        height: 3px;
+        background: $barras;
+        width: 50px;
+        margin: 10px auto;
+        transition: 0.5s ease;
+      }
+    }
+    .active {
+      .bar:first-child {
+        transform: translateY(15px);
+      }
+      .bar:last-child {
+        transform: translateY(-15px);
+        animation: CambioColor 0.5s forwards ease;
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      width: 100%;
+      padding: 30px;
+      transition: color .3s ease-in;
+    }
+
+    .logo {
+      order: 1;
+      display: none;
+      text-align: center;
+    }
+    a {
+      display: inline-block;
+      color: $fondo;
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0 30px;
+      text-decoration: none;
+      position: relative;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .color{
+      a{
+        color:$barras;
+      }
+    }
+  }
+  .Introduccion {
+    width: 100%;
+    color: $fondo;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -146px;
+    margin-left: -148px;
+  }
+}

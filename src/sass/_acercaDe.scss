@@ -1,0 +1,51 @@
+$fondo: #f9f6ff;
+.mainContent {
+  background: {
+    image: url("../public/imgs/textura2.png");
+    repeat: repeat;
+    //color: #181825;
+  }
+  .AcercaDe {
+    height: 600px;
+    .contenedor {
+      overflow: visible;
+      position: relative;
+    }
+    .foto {
+      width: 80%;
+      position: absolute;
+      left: 0;
+      top: -50px;
+      z-index: 0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+
+      img {
+        vertical-align: top;
+        width: 100%;
+      }
+    }
+    article {
+      background: $fondo;
+      padding: 40px;
+      width: 50%;
+      position: relative;
+      top: 100px;
+      z-index: 1;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+      float: right;
+
+      h3 {
+        font: {
+          size: 50px;
+          weight: 300;
+          family:"brush",cursive;
+        }
+        margin-bottom: 40px;
+      }
+      p {
+        line-height: 28px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

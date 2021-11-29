@@ -1,0 +1,28 @@
+{
+  "name": "trabajofinal",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --mode=development",
+    "start": "http-server dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "copy-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "http-server": "^14.0.0",
+    "jquery": "^3.6.0",
+    "sass": "^1.43.5",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "workbox-webpack-plugin": "^6.4.1"
+  }
+}

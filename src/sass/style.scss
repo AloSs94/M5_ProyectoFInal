@@ -1,0 +1,196 @@
+$fondo:#F9F6FF;
+$barras: #1c1c1c;
+@font-face {
+  font-family: 'brush';
+  src: url("../fonts/alexbrush-regular-webfont.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif, Arial, sans-serif;
+
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+button{
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import "header";
+@import "acercaDe";
+@import "menuComida";
+@import "Galeria";
+@import "Ubicacion";
+@import "Footer";
+
+$max-width: 800px;
+$MaxWidth: 500px;
+$background-color:#1c1c1c;
+/*Media queries*/
+@media screen and(max-width:$max-width) {
+  header {
+    .contenedor {
+      position: relative;
+    }
+    .menu{
+      background-color:$fondo;
+      height:80px;
+      width:100%;
+      .nav-menu{
+        background:$background-color;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow:hidden;
+        transition: max-height 1.5s ease ;
+        li{
+          z-index: 1;
+          margin:0;
+          width:100%;
+          padding: 10px 0;
+          a{
+            display: block;
+            margin: 0;
+          }
+        }
+      }
+
+      #Responsive{
+        display:block;
+
+       &.active{
+        animation: Fondo 0.5s forwards ease;
+       }
+      }
+      .logo{
+        display: block;
+        float:left;
+        padding:15px 0;
+        margin-top: 10px;
+        color: #1c1c1c;
+        font-family: 'brush';
+        font-size: 30px;
+      }
+      
+    }
+    .Introduccion {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+ 
+  .mainContent {
+    .AcercaDe {
+      height: 600px;
+      .foto {
+        width: 100%;
+        position: relative;
+      }
+      article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0, 0);
+      }
+    }
+    .Menu {
+      padding-top:0;
+      article {
+        width: 100%;
+      }
+    }
+    .Galeria {
+      .foto {
+        width: 50%;
+      }
+    }
+    .mapa {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and(max-width:$MaxWidth) {
+  header {
+     
+    .Introduccion {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -100px;
+    }
+    #ContenedorMenu{
+      position: relative;
+    }
+   
+  }
+  .mainContent {
+    .AcercaDe {
+      article {
+        h3 {
+          font-size: 34px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .Menu {
+      padding-top: 300px;
+      article {
+        width: 100%;
+      }
+    }
+    .Galeria {
+      margin-top: 50px;
+      .foto {
+        width: 100%;
+      }
+    }
+    .mapa {
+      width: 80%;
+      margin: auto;
+    }
+    .Menu {
+      article {
+        .nombre,
+        .precio {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+    .Ubicacion {
+      .Direccion {
+        margin-bottom: 15px;
+      }
+      .Direccion,
+      .Horarios {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
